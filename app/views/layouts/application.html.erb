@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Firstapp</title>
-    <%= csrf_meta_tags %>
+    <title>DSTORE</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link href="https://fast.fonts.net/cssapi/7d1b8239-b68b-40c9-a9b8-ab3d2cedf87e.css" rel="stylesheet" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="container">
+      <%= image_tag("dstore_logo.png", class: "brand") %>
+    	<nav class="navbar navbar-inverse">
+    		<div>
+  	  		<div class="navbar-header">
+  	  			<button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  	  				<span class="sr-only">Toggle navigation</span>
+  	          <span class="icon-bar"></span>
+  	          <span class="icon-bar"></span>
+  	          <span class="icon-bar"></span>
+  	  			</button>
+  	  		</div>
 
-  	<nav>
-  		<ul>
-  			<li>Home</li>
-  			<li>About</li>
-  			<li>Contact</li>
-  		</ul>
-  	</nav>
+  	  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  	  			<ul class="nav navbar-nav">
+  	  			<li><a href="#">Home</a></li>
+  	  			<li><a href="#">About</a></li>
+  	  			<li><a href="#">Contact</a></li>
+  	  		</ul>
+  	  		</div>
+    		</div>
+    	</nav>
 
-    <%= yield %>
+      <%= yield %>
 
-    <footer>
-    	&copy; 2017 George Evans
-    </footer>
+      <footer>
+      	&copy; 2017 George Evans
+      </footer>
+    </div>
   </body>
 </html>

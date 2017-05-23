@@ -1,3 +1,56 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*General*/
+
+body {
+	color: #000;
+}
+
+
+
+/*Navigation*/
+
+.navbar {
+	border-radius: 0;
+	background-color: #000;
+	min-height: 46px;
+	border: 0;
+}
+
+.brand {
+	height: 45px;
+	width: auto;
+	margin: 20px 0 20px;
+}
+
+
+
+
+
+/*Typography*/
+
+body {
+	font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+	font-family: 'ITC Avant Garde Gothic W05 Bol', helvetica, arial, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	text-align: left;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	font-family: 'ITC Avant Garde Gothic W05 Bol', helvetica, arial, sans-serif;
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	background-image: url("../img/nav-separator.png") no-repeat left center;
+	padding: 13px 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #ccc;
+}
+
+
