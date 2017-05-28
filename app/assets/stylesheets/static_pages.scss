@@ -23,6 +23,38 @@ body {
 
 
 
+/*Product Grid*/
+
+.grid_wrap {
+	padding: 0;
+}
+
+.col-md-3 {
+	padding-bottom: 30px;
+}
+
+.product_grid_box {
+	background-color: #ccc;
+	padding: 20px;
+	color: #000000 !important;
+	font-size: 16px;
+	line-height: 28px;
+	min-height: 174px;
+	position: relative;
+}
+
+.product_grid_box h2 {
+	margin: 0;
+	line-height: 18px;
+}
+
+.product_grid_box .price {
+	display: block;
+	font-weight: bold;
+	position: absolute;
+	bottom: 20px;
+}
+
 
 
 /*Typography*/
@@ -38,6 +70,11 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	text-align: left;
+}
+
+h2 {
+	font-size: inherit;
+	font-weight: bold;
 }
 
 .navbar-inverse .navbar-nav > li > a {
