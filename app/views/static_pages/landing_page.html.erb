@@ -1,2 +1,14 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.name %>
+
+<div class="container-fluid grid_wrap">
+  <div class="row">
+      <div class="col-xs-8 col-sm-4 col-md-3">
+        <%= image_tag(@featured_product.image_url, class: "img-responsive") %>
+        <div class="product_grid_box">
+          <a href="#"><h2><%= @featured_product.name %></h2></a>
+          <%= @featured_product.colour %>
+          <%= link_to 'Show', @featured_product %>
+          <span class="price">£<%= @featured_product.price %></span>
+        </div>
+      </div><!-- /col -->
+  </div>
