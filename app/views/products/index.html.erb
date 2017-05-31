@@ -33,17 +33,7 @@
 
 <div class="container-fluid grid_wrap">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-xs-8 col-sm-4 col-md-3">
-        <%= image_tag(product.image_url, class: "img-responsive") %>
-        <div class="product_grid_box">
-          <a href="#"><h2><%= product.name %></h2></a>
-          <%= product.colour %>
-          <%= link_to 'Show', product %>
-          <span class="price">£<%= product.price %></span>
-        </div>
-      </div><!-- /col -->
-      <% end -%>
+    <%= render @products %>
   </div>
   
 </div>
