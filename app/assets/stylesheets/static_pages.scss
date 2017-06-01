@@ -4,6 +4,13 @@ body {
 	color: #000;
 }
 
+a:hover {
+	background-color: transparent;
+}
+
+p {
+	margin: 30px 0;
+}
 
 
 /*Navigation*/
@@ -30,8 +37,8 @@ body {
 .carousel-caption {
 	font-family: 'ITC Avant Garde Gothic W05 Bol', helvetica, arial, sans-serif;
 	font-size: 70px;
-	line-height: 60px;
-	letter-spacing: -2px;
+	line-height: 85%;
+	letter-spacing: -0.03em;
 	font-kerning: normal !important;
 	text-rendering: optimizeLegibility;
 	text-align: left;
@@ -57,7 +64,7 @@ body {
 	opacity: 100;
 }
 
-.carousel-inner > .item > img {
+.carousel-inner > .item > a > img {
 	width: 50%;
 }
 
@@ -83,7 +90,7 @@ body {
 
 /*Product Grid*/
 
-.grid_wrap {
+.page_wrap {
 	padding: 0;
 }
 
@@ -117,6 +124,23 @@ body {
 	display: block;
 }
 
+/*Product Page*/
+
+.product_colour {
+	font-size: 22px;
+}
+
+.colour_box {
+	height: 20px;
+	width: 20px;
+	border: 1px solid #000;
+	display: inline-block;
+	margin-right: 8px;
+	position: relative;
+	top: 2px;
+}
+
+
 /*Footer*/
 
 footer {
@@ -134,15 +158,27 @@ body {
 h1 {
 	font-family: 'ITC Avant Garde Gothic W05 Bol', helvetica, arial, sans-serif;
 	font-size: 28px;
+	line-height: 85%;
 	font-weight: bold;
 	text-transform: uppercase;
-	letter-spacing: -1px;
+	letter-spacing: -0.05em;
 	text-align: left;
 }
 
 h2 {
 	font-size: inherit;
 	font-weight: bold;
+}
+
+h1.product_title {
+	font-size: 70px;
+	margin: 0;
+}
+
+.product_price {
+	font-family: 'ITC Avant Garde Gothic W05 Bol', helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 26px;
 }
 
 .navbar-inverse .navbar-nav > li > a {

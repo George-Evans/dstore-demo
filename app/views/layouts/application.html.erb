@@ -18,7 +18,7 @@
 
   <body>
     <div class="container">
-      <%= image_tag("dstore_logo.png", class: "brand") %>
+      <%= link_to image_tag("dstore_logo.png", class: "brand"), root_path %>
     	<nav class="navbar navbar-inverse">
     		<div>
   	  		<div class="navbar-header">
@@ -32,9 +32,9 @@
 
   	  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   	  			<ul class="nav navbar-nav">
-  	  			<li><a href="#">Home</a></li>
-  	  			<li><a href="#">About</a></li>
-  	  			<li><a href="#">Contact</a></li>
+  	  			<li><%= link_to 'Products', products_path %></li>
+  	  			<li><%= link_to 'About', static_pages_about_path %></li>
+  	  			<li><%= link_to 'Contact', static_pages_contact_path %></li>
   	  		</ul>
   	  		</div>
     		</div>
