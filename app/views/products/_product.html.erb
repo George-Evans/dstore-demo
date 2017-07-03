@@ -3,6 +3,6 @@
         <div class="product_grid_box">
           <a href="#"><h2><%= link_to product.name, product %></h2></a>
           <%= product.colour %>
-          <span class="price">£<%= product.price %></span>
+          <span class="price">£<%= number_with_precision(product.price, precision: 2) %></span>
         </div>
       </div><!-- /col -->

@@ -10,7 +10,7 @@
     <div class="col-xs-12 col-sm-6">
       <h1 class="product_title"><%= @product.name %></h1>
       <p><div class="colour_box" style="background-color: <%= @product.colour %>;"></div><span class="product_colour"><%= @product.colour %></span></p>
-      <p class="product_price">£<%= @product.price %></p>
+      <p class="product_price">£<%= number_with_precision(@product.price, precision: 2) %></p>
       <p><%= @product.description %></p>
     </div>
   </div>
