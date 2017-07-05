@@ -15,6 +15,10 @@ p {
 
 /*Navigation*/
 
+.header {
+	position: relative;
+}
+
 .navbar {
 	border-radius: 0;
 	background-color: #000;
@@ -26,6 +30,16 @@ p {
 	height: 45px;
 	width: auto;
 	margin: 20px 0 20px;
+}
+
+.search_bar {
+	margin-bottom: 10px;
+	float: right;
+	margin-top: 41px;
+}
+
+.search_bar > form > label {
+	display: none;
 }
 
 /*Carousel*/

@@ -18,13 +18,15 @@
 
   <body>
     <div class="container">
-      <%= link_to image_tag("dstore_logo.png", class: "brand"), root_path %>
-      <div>
-        <%= form_with(url: products_path, method: 'get') do |form| %>
+      <div class="header">
+        <%= link_to image_tag("dstore_logo.png", class: "brand"), root_path %>
+      <div class="search_bar">
+        <%= form_with(url: products_path, method: 'get', local: 'true') do |form| %>
           <%= form.label :q, 'Search for:' %>
           <%= form.text_field :q, id: 'q', value: params[:q] %>
           <%= form.submit 'Search' %>
-      <% end %>
+        <% end %>
+      </div>
       </div>
     	<nav class="navbar navbar-inverse">
     		<div>
