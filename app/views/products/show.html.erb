@@ -5,13 +5,20 @@
 <div class="container-fluid page_wrap">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <%= image_tag(@product.image_url, class: "img-responsive product-img main") %>
     </div>
     <div class="col-xs-12 col-sm-6">
       <h1 class="product_title"><%= @product.name %></h1>
       <p><div class="colour_box" style="background-color: <%= @product.colour %>;"></div><span class="product_colour"><%= @product.colour %></span></p>
       <p class="product_price">£<%= number_with_precision(@product.price, precision: 2) %></p>
       <p><%= @product.description %></p>
+      <div class="comments-box">
+        <h2>Reviews</h2>
+        <h3 class="comment-summary"><%= @product.highest_rating_comment.summary %></h3>
+        <p class="comment-body"><%= @product.highest_rating_comment.body %></p>
+        <h3 class="comment-summary"><%= @product.lowest_rating_comment.summary %></h3>
+        <p class="comment-body"><%= @product.lowest_rating_comment.body %></p>
+      </div>
     </div>
   </div>
 </div>

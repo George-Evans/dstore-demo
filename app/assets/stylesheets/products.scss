@@ -1,3 +1,34 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*Images*/
+
+.product-img.main {
+	margin-bottom: 30px;
+}
+
+/*Comments*/
+
+.comments-box {
+	background-color: #ddd;
+	padding: 25px;
+}
+
+.comments-box > h2 {
+	font-size: 18px;
+	margin: 5px 0 25px;
+}
+
+.comments-box > h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.comments-box > p {
+	margin:0 0 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #999;
+}
