@@ -1,0 +1,25 @@
+$(document).on("turbolinks:load", function() {
+
+	// Alerts Fade Out
+	$(".alert").delay(800).fadeOut(1000);
+
+	// Star Rating Raty Plugin - Sumbit
+	$(".rating").raty({
+		starHalf: "<%= asset_path 'star-half.png' %>",
+		starOff: "<%= asset_path 'star-off.png' %>",
+		starOn: "<%= asset_path 'star-on.png' %>",
+		scoreName: "comment[rating]"
+	});
+
+	// Start Rating Raty Plugin - Read
+	$(".rated").raty({
+		starHalf: "<%= asset_path 'star-half.png' %>",
+		starOff: "<%= asset_path 'star-off.png' %>",
+		starOn: "<%= asset_path 'star-on.png' %>",
+		readOnly: true,
+		scoreName: "comment[rating]",
+		score: function() {
+			return $(this).attr('data-score');
+		}
+	});
+});
