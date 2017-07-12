@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p><%= link_to 'Back to Products', products_path %></p>
 
 <div class="container-fluid page_wrap">
@@ -16,6 +14,7 @@
       <div class="comments-box">
         <%= render 'new_comment' %>
         <%= render 'comments' %>
+        <%= will_paginate @comments, class: "digg_pagination" %>
       </div>
     </div>
   </div>

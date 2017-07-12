@@ -61,3 +61,6 @@ gem 'devise'
 
 #Use CanCanCan Authortization
 gem 'cancancan', '~> 1.10'
+
+#User Pagination Gem
+gem 'will_paginate', '~> 3.1.1'
