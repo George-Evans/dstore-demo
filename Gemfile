@@ -67,6 +67,7 @@ gem 'will_paginate', '~> 3.1.1'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 gem 'rails-controller-testing'
