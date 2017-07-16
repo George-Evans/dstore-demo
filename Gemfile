@@ -77,3 +77,6 @@ gem 'rails-controller-testing'
 # Use Stripe for Payments
 gem 'stripe'
 
+#Use Brakeman Security Scanner
+gem 'brakeman', require: false
+
