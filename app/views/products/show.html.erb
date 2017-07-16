@@ -10,7 +10,8 @@
       <p><div class="colour_box" style="background-color: <%= @product.colour %>;"></div><span class="product_colour"><%= @product.colour %></span></p>
       <div class="product_price"><%= number_to_currency((@product.price / 100), precision: 2, unit: "£") %>
         <div class="pay_button">
-          <%= form_with(url: "payments/create") do |form| %>
+          <%= form_with(url: "payments/create", method: "post", local: "true") do |form| %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
             <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
           <% end %>
         </div> 
