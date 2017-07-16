@@ -1,13 +1,13 @@
+<h2>Reviews</h2>
 <% if signed_in? %>
-	<h2>Add a Review:</h2>
-	<%= form_for([@product, @product.comments.build]) do |f| %>
+	<%= form_for([@product, @product.comments.build], remote: true) do |f| %>
 		<p class="comment-summary">
-			<%= f.label :summary %>
+			<%= f.label :summary, "Add a Review" %>
 			<%= f.text_field :summary %>
 			<div class="rating"></div>
 		</p>
 		<p>
-			<%= f.label :body, "Review" %>
+			<%= f.label :body, "Details" %>
 			<%= f.text_area :body %>
 		</p>
 		<p>

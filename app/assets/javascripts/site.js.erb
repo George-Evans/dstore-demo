@@ -1,8 +1,4 @@
-$(document).on("turbolinks:load", function() {
-
-	// Alerts Fade Out
-	$(".alert").delay(800).fadeOut(1000);
-
+var refeshRating = function() {
 	// Star Rating Raty Plugin - Sumbit
 	$(".rating").raty({
 		starHalf: "<%= asset_path 'star-half.png' %>",
@@ -22,6 +18,18 @@ $(document).on("turbolinks:load", function() {
 			return $(this).attr('data-score');
 		}
 	});
+};	
+	
+
+$(document).on("turbolinks:load", function() {
+
+	// Call Raty Plugin on Load
+	refeshRating();
+
+	// Alerts Fade Out
+	$(".alert").delay(800).fadeOut(1000);
+
+
 
 	// ElevateZoom On Main Product Image
 	$(".img-zoom").elevateZoom({easing : true});

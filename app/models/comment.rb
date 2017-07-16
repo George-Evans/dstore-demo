@@ -10,5 +10,6 @@ class Comment < ApplicationRecord
 
   scope :rating_desc, -> { order(rating: :desc) }
   scope :rating_asc, -> { order(rating: :asc) }
+  scope :most_recent, -> {order(created_at: :desc)}
 
 end
