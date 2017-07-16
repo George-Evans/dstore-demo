@@ -1,0 +1,9 @@
+<script 
+	src="https://checkout.stripe.com/checkout.js"
+	class="stripe-button"
+	data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+
+  data-name="Defected Store"
+  data-description="<%= product.name %>"
+  data-amount="<%= product.price %>">
+</script>

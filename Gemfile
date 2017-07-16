@@ -66,8 +66,14 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.1'
 
 group :development, :test do
+  #Use RSpec for Testing
   gem 'rspec-rails', '~> 3.5'
+  #Use FactoryGirl Factories
   gem 'factory_girl_rails', '~> 4.0'
 end
 
 gem 'rails-controller-testing'
+
+# Use Stripe for Payments
+gem 'stripe'
+

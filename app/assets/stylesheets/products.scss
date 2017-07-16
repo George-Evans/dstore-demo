@@ -53,4 +53,27 @@ h3 > .rated {
 	margin-bottom: 10px;
 }
 
+/*Pay Button*/
+
+.product_price {
+	position: relative;
+	display: inline;
+}
+
+.pay_button {
+	position: absolute;
+	display: inline;
+	bottom: 1px;
+	left: 100px;
+	right: -140px;
+}
+
+.stripe-button-el {
+	background-color: #000;
+}
+
+.stripe-button-el > span {
+	padding: 1px 12px !important;
+}
+
 

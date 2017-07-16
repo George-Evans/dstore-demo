@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create(name: "seed-generated product", description: "This product was created using the seed.db file	")
+Product.create(name: "seed-generated product", description: "This product was created using the seed.db file", price: 25, image_url: "products/tee_soulfuric.jpg", colour: "Black")
