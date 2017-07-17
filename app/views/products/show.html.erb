@@ -1,35 +1,37 @@
 <p><%= link_to 'Back to Products', products_path %></p>
 
-<div class="container-fluid page_wrap">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 product-img main">
-      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <h1 class="product_title"><%= @product.name %></h1>
-      <p><div class="colour_box" style="background-color: <%= @product.colour %>;"></div><span class="product_colour"><%= @product.colour %></span></p>
-      <div class="product_price"><%= number_to_currency((@product.price / 100), precision: 2, unit: "£") %>
-        <div class="pay_button">
-          <%= form_with(url: "payments/create", method: "post", local: "true") do |form| %>
-            <%= hidden_field_tag(:product_id, @product.id) %>
-            <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
-          <% end %>
-        </div> 
+<% cache @product do %>
+  <div class="container-fluid page_wrap">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 product-img main">
+        <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %>
       </div>
-      <p class="rated-caption">Average Rating: &nbsp; <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span></p> 
-    </div>
-    <div class="col-xs-12 col-sm-6 product_desc">
-      <p><%= @product.description %></p>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <div class="comments-box">
-        <%= render 'new_comment' %>
-        <%= render 'comments' %>
-        <%= will_paginate @comments, class: "digg_pagination" %>
+      <div class="col-xs-12 col-sm-6">
+        <h1 class="product_title"><%= @product.name %></h1>
+        <p><div class="colour_box" style="background-color: <%= @product.colour %>;"></div><span class="product_colour"><%= @product.colour %></span></p>
+        <div class="product_price"><%= number_to_currency((@product.price / 100), precision: 2, unit: "£") %>
+          <div class="pay_button">
+            <%= form_with(url: "payments/create", method: "post", local: "true") do |form| %>
+              <%= hidden_field_tag(:product_id, @product.id) %>
+              <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
+            <% end %>
+          </div> 
+        </div>
+        <p class="rated-caption">Average Rating: &nbsp; <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span></p> 
+      </div>
+      <div class="col-xs-12 col-sm-6 product_desc">
+        <p><%= @product.description %></p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="comments-box">
+          <%= render 'new_comment' %>
+          <%= render 'comments' %>
+          <%= will_paginate @comments, class: "digg_pagination" %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <% if signed_in? && current_user.admin? %>
 <p><%= link_to 'Edit', edit_product_path(@product) %></p>
