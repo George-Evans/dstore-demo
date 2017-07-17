@@ -80,3 +80,6 @@ gem 'stripe'
 #Use Brakeman Security Scanner
 gem 'brakeman', require: false
 
+#Use Dalli Memcache Client
+gem 'dalli'
+
