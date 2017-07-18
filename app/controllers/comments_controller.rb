@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+	before_filter :belongs_to_user
+	load_and_authorize_resource
 	
 
 	def create
@@ -20,6 +22,7 @@ class CommentsController < ApplicationController
 	def destroy
 		@comment = Comment.find(params[:id])
 		product = @comment.product
+		@comment.user = current_user
 		@comment.destroy
 		redirect_to product
 	end
