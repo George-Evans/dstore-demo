@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-	before_filter :belongs_to_user
 	load_and_authorize_resource
 	
 
