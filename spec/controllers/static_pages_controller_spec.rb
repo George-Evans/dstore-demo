@@ -9,7 +9,7 @@ describe StaticPagesController, type: :controller do
 			expect(response).to be_ok
 			expect(response).to render_template("index")
 		end
-
+		
 	end
 	
 end
