@@ -83,3 +83,6 @@ gem 'brakeman', require: false
 #Use Dalli Memcache Client
 gem 'dalli'
 
+#Use Redis 
+gem 'redis'
+
