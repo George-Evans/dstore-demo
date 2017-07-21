@@ -17,7 +17,8 @@
             <% end %>
           </div> 
         </div>
-        <p class="rated-caption">Average Rating: &nbsp; <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span> Views <span class="badge"><%= @product.views %></span></p> 
+        <p class="rated-caption">Average Rating: &nbsp; <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span></p>
+        <p>Views:<%= @product.views %> &nbsp; Latest Reviewer: <%= @product.get_latest_reviewer %></p> 
       </div>
       <div class="col-xs-12 col-sm-6 product_desc">
         <p><%= @product.description %></p>

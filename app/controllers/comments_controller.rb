@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 		@comment.user = current_user
 		respond_to do |format|
 			if @comment.save
+				@product.set_latest_reviewer("#{@user.first_name}")
 				format.html { redirect_to @product, notice: "Review was created sucessfully." }
 				format.json { render :show, status: :created, location: @product }
 				format.js

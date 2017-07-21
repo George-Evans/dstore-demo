@@ -29,8 +29,16 @@ class Product < ApplicationRecord
 		$redis.get("product:#{id}")
 	end
 
-	def viewed
+	def viewed!
 		$redis.incr("product:id")
+	end
+
+	def set_latest_reviewer(user_name)
+		$redis.set("latest_reviewer_product:#{id}", "#{user_name}")
+	end
+
+	def get_latest_reviewer
+		$redis.get("latest_reviewer_product:#{id}")
 	end
 
 end
