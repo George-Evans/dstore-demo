@@ -26,6 +26,7 @@
       <div class="col-xs-12 col-sm-6">
         <div class="comments-box">
           <%= render 'new_comment' %>
+          <div class="alert alert-info" style="display: none;" role="alert">A new comment was posted!</div>
           <%= render 'comments' %>
           <%= will_paginate @comments, class: "digg_pagination" %>
         </div>
