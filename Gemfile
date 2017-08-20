@@ -87,7 +87,7 @@ gem 'brakeman', require: false
 gem 'dalli'
 
 #Use Redis 
-gem 'redis'
+gem 'redis-rails', '~> 5'
 
 
 
